@@ -29,8 +29,7 @@ jobs:
           npm set-script export "next export"
 
       - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.4.0 
+        uses: JamesIves/github-pages-deploy-action@latest
         with:
           branch: gh-pages
           folder: out
