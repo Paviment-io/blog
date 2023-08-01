@@ -3,8 +3,8 @@
  */
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
-let assetPrefix = ''
-let basePath = '/'
+let assetPrefix = '/'
+let basePath = '/public'
 
 if (isGithubActions) {
   // trim off `<owner>/`
@@ -16,7 +16,7 @@ if (isGithubActions) {
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: assetPrefix,
+  assetPrefix: process.env.NODE_ENV === 'production' ? assetPrefix : './.next',
   basePath: basePath,
   images: {
     unoptimized: true
