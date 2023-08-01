@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           # update the Node version to meet your needs
           node-version: 16
@@ -28,8 +28,8 @@ jobs:
           npm set-script build "next build"
           npm set-script export "next export"
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@latest
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: out
