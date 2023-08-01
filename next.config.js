@@ -16,7 +16,7 @@ if (isGithubActions) {
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? assetPrefix : './.next',
+  assetPrefix: process.env.NODE_ENV === 'production' ? assetPrefix : '',
   basePath: basePath,
   images: {
     unoptimized: true
